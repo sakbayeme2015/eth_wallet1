@@ -1,0 +1,42 @@
+ganache-cli --fork https://mainnet.infura.io/v3/3811bd537b294d8596d76d426a076dbc -m "address erupt gentle strong gaze club design nest valid skill drift aware" -u 0x1964beE3E680446eF650E135e5addD74556d1A77
+
+
+const addToWhitelist = async () => {
+try {
+let user = await getUserAccount();
+const chainId = await web3.eth.net.getId();
+let owner = await factory.methods.owner().call();
+const adding = await factory.methods.addToWhitelist(user).send({ from: owner, gas: gas, chainId });
+const result = await verifyWhitelist();
+}
+catch (err) {
+console.log('error adding to the whitelist', err)}}
+
+
+0x835fC08dd8f20B8777841751ae941b4c335d7bf7
+
+Mnemonic:      indicate breeze coffee render supply moral hello mountain lyrics bottom hip badge 
+
+(0) 0x2220237f04c6f9ded48C66F583E9bA8c92Cb9D98 (100 ETH)
+(1) 0xa4ee7Bc1cc8DD4376017CEcbAe5Fadf47029A6e2 (100 ETH)
+(2) 0xe777F07Bb75b0343da36136581B037E6713e2560 (100 ETH)
+(3) 0x9F7F66C8bE7Aab0E7e88B1f36E0d31Dc2649f797 (100 ETH)
+(4) 0xD94BF395Cb4fb8241448Ee36352688524e697abe (100 ETH)
+(5) 0x8789b2302041d38914B253ebFe817bDCC71D3f61 (100 ETH)
+(6) 0xf51FC707116324bF0BFE622215421395310D14F5 (100 ETH)
+(7) 0x582Bd53706F76F3FdaF9B123511eBF35A8e3Ac06 (100 ETH)
+(8) 0x6577AFdA669e9c101db96168fc55F5446938F229 (100 ETH)
+(9) 0x466c3AAa52B09b589F5F11bb3ae726DE29a9be81 (100 ETH)
+
+Private Keys
+==================
+(0) 0x554bb59ed2a1f6a1f7ece3e70db71f2b04705151f2f16fcc50678de1b49b8722
+(1) 0x86ec02ad7e0aebc04281d641960cedcc86f4362cab84e604227de0e9c0159abe
+(2) 0x8aa953c95398e6c47a2b31ed6f5fb6693a65fcddbee634f14404ec9f0381456e
+(3) 0x96e784921c1dd81115449f94d11b04bde391cf32fc129dd69e66d212c4f3f54b
+(4) 0xf6c4ae9ddcfdddd3b2d4462be78c111131a95a201432954a37cf8a271b8df233
+(5) 0xa6e9a5a29be5b3c345203d987b8b568ac712bb2a4aea8d10acc06138b8f95ef1
+(6) 0x0d50850fa9be9f84b53b2d5b7c95925557d4c1388ae8e642ff041a3a9d2dfea8
+(7) 0xf5249218e281924305392913a17d3ecd9e443269e2dd280847a65dc74043c884
+(8) 0x8db5c75c173d40ab212cce15de73ba33c3f4795f37bebb7d4f05cf166fd4c6a7
+(9) 0x7a5ab01c8a230060a51bd3b15fa691b87698cc0b2ead8b5e88289951a61d60c3
