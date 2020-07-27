@@ -4,8 +4,6 @@ import './App.css';
 import Web3 from 'web3';
 import DaiTokenMock from '../abis/DaiTokenMock.json'
 
-
-
 class App extends Component { 
    async componentWillMount() { 
     await this.loadWeb3()
@@ -26,15 +24,15 @@ class App extends Component {
   }
 
 
-
   async loadBlockchainData() { 
     const web3 = window.web3
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
     const networkId = await web3.eth.net.getId() 
-    const daiTokenAddress = DaiTokenMock.networks[networkId]
-    if(daiTokenAddress) {
-      const daiTokenMock = new web3.eth.Contract(DaiTokenMock.abi, daiTokenAddress.address)
+    const networkdata = DaiTokenMock.networks[networkId]
+    if(networkdata) {
+      const daiTokenAddress = "0xB22b317caE6d3A31E165C1e8BE9693Ee2483C04c"
+      const daiTokenMock = new web3.eth.Contract(DaiTokenMock.abi, daiTokenAddress)
       this.setState({ daiTokenMock: daiTokenMock })
       const balance = await daiTokenMock.methods.balanceOf(this.state.account).call()
       this.setState({ balance: web3.utils.fromWei(balance.toString(), 'Ether') })
@@ -47,8 +45,6 @@ class App extends Component {
 
 
   }
-
-
 
 
     //const daiTokenAddress = "0x425D765dCa80C2dD3779A2f6f67A3D1a12B154Fd" // Replace DAI Address here
@@ -67,8 +63,6 @@ class App extends Component {
   }
 
 
-
-
   constructor(props) {
     super(props)
     this.state = {
@@ -80,7 +74,6 @@ class App extends Component {
 
   this.transfer = this.transfer.bind(this)
 }
-
 
 
   render() {
